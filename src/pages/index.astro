@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Carrousel from '../components/Carrousel.astro';
+import Services from '../components/Services.astro';
 ---
 
 <Layout title="Jardín de la paz | Servicios Velatorios y Funerarios.">
@@ -9,11 +10,11 @@ import Carrousel from '../components/Carrousel.astro';
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f8f8f8d2" fill-opacity="1" d="M0,224L30,218.7C60,213,120,203,180,181.3C240,160,300,128,360,133.3C420,139,480,181,540,192C600,203,660,181,720,154.7C780,128,840,96,900,106.7C960,117,1020,171,1080,181.3C1140,192,1200,160,1260,149.3C1320,139,1380,149,1410,154.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
 	</div>
 	<section class="flex items-center space-x-8 flex-wrap justify-evenly bg-[#f8f8f8d2] pb-10 px-10">
-		<div class="content w-[50%] bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+		<div class="content w-[50%] bg-white rounded-lg shadow-xl shadow-gray-300 dark:bg-gray-800 dark:border-gray-700">
 			<img class="rounded-lg" src="/imgs/historia/imagen-historia1.webp" alt="" />
 		</div>
 		<div class="w-[45%]"> 
-			<h3 id="title2" class="text-5xl text-center font-semibold text-slate-800 my-10">César García ~ Presidente</h3>
+			<h3 id="title2" class="text-5xl text-center text-slate-800 my-10">César García ~ Presidente</h3>
 			<p class="text-sm text-slate-700">
 				"No existe mejor lugar para homenajear
 				a nuestros seres queridos que
@@ -26,24 +27,37 @@ import Carrousel from '../components/Carrousel.astro';
 	</section>
 	<section class="flex items-center space-x-8 flex-wrap justify-evenly bg-[#f8f8f8d2] pt-10 px-10">
 		<div class="w-[45%]">
-			<h3 id="title1" class="text-5xl font-semibold text-slate-800 my-10 animate__animated">Nuestra historia</h3>
+			<h3 id="title1" class="text-5xl text-slate-800 my-10 animate__animated">Nuestra historia</h3>
 			<p class="text-sm text-slate-700">Desde sus inicios, Jardín de la Paz anheló ofrecer a las familias una manera diferente de homenajear y despedir a sus seres queridos. Sus fundadores tenían claro que lo que buscaban era un espacio que transmita mucha paz, y qué mejor elemento para ello que la misma naturaleza.
 				Hoy, sus floridos y arbolados jardines reciben las visitas de familiares y amigos que quieren recordar a los que hoy ya descansan en paz entre árboles centenarios, el aroma de las flores, y paisajes que homenajean la vida con tanta belleza natural.
 				Jardín de la Paz cuenta con la mayor cobertura a nivel nacional con sus jardines y salas, acompañando a familias en Asunción, Lambaré, Fernando de la Mora, Luque, Encarnación, Coronel Oviedo y alrededores.</p>
 		</div>
-		<div class="content w-[50%] bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+		<div class="content w-[50%] bg-white rounded-lg shadow-xl shadow-gray-300 dark:bg-gray-800 dark:border-gray-700">
 			<img class="rounded-lg animate__animated animate__fadeInUp" src="/imgs/historia/imagen-historia2.webp" alt="" />
 		</div>
 	</section>
 	<div>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f8f8f8d2" fill-opacity="1" d="M0,160L30,144C60,128,120,96,180,90.7C240,85,300,107,360,106.7C420,107,480,85,540,101.3C600,117,660,171,720,202.7C780,235,840,245,900,213.3C960,181,1020,107,1080,101.3C1140,96,1200,160,1260,165.3C1320,171,1380,117,1410,90.7L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
 	</div>
+	<section class="text-center w-[650px] mx-auto">
+		<h3 class="text-4xl font-semibold mb-5">Servicios Velatorios y Funerarios</h3>
+		<p class="text-sm">Nuestros servicios velatorios y funerarios están aquí para ayudarle a honrar y despedir a su ser querido con respeto y dignidad. Sabemos que cada despedida es única y personal, y estamos aquí para brindarle el apoyo que necesita en este momento. Confíe en nosotros para cuidar de todos los detalles con compasión y profesionalismo, para que pueda centrarse en el amor y los recuerdos compartidos. </p>
+		<a href="#" class="btn btn-neutral mt-8 animate-bounce">Conoce los planes</a>
+	</section>
+	<section class="mt-10">
+		<Services></Services>
+	</section>
 </Layout>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
-	p {
-		font-family: 'Inter', sans-serif;
-		font-weight: 300;
+	@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700&display=swap');
+	* {
+		font-family: 'Onest', sans-serif;
+	}
+	h3 {
+		font-weight: 700;
+	}
+	p !important{
+		font-weight: 100;
 	}
 	@keyframes show {
 		from {
