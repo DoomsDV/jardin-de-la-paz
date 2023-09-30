@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Carrousel from '../components/Carrousel.astro';
 import Services from '../components/Services.astro';
+import Obituarios from '../components/Obituarios.astro';
 ---
 
 <Layout title="Jardín de la paz | Servicios Velatorios y Funerarios.">
@@ -40,7 +41,7 @@ import Services from '../components/Services.astro';
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f8f8f8ee" fill-opacity="1" d="M0,160L30,144C60,128,120,96,180,90.7C240,85,300,107,360,106.7C420,107,480,85,540,101.3C600,117,660,171,720,202.7C780,235,840,245,900,213.3C960,181,1020,107,1080,101.3C1140,96,1200,160,1260,165.3C1320,171,1380,117,1410,90.7L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
 	</div>
 	<section class="text-center w-[650px] mx-auto">
-		<h3 id="servicesTitle" class="text-4xl font-semibold mb-5">Servicios Velatorios y Funerarios</h3>
+		<h3 id="titleAnimated" class="text-4xl font-semibold mb-5">Servicios Velatorios y Funerarios</h3>
 		<p class="text-sm">Nuestros servicios velatorios y funerarios están aquí para ayudarle a honrar y despedir a su ser querido con respeto y dignidad. Sabemos que cada despedida es única y personal, y estamos aquí para brindarle el apoyo que necesita en este momento. Confíe en nosotros para cuidar de todos los detalles con compasión y profesionalismo, para que pueda centrarse en el amor y los recuerdos compartidos. </p>
 		<a href="#" class="btn btn-neutral mt-8 animate-bounce">Conoce los planes</a>
 	</section>
@@ -48,8 +49,19 @@ import Services from '../components/Services.astro';
 	<section class="mt-10">
 		<Services></Services>
 	</section>
+	<div>
+		<svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 370" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(142.344, 228.034, 169.973, 1)" offset="0%"></stop><stop stop-color="rgba(138.522, 212.097, 91.677, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,333L26.7,320.7C53.3,308,107,284,160,240.5C213.3,197,267,136,320,129.5C373.3,123,427,173,480,178.8C533.3,185,587,148,640,166.5C693.3,185,747,259,800,271.3C853.3,284,907,234,960,178.8C1013.3,123,1067,62,1120,86.3C1173.3,111,1227,222,1280,240.5C1333.3,259,1387,185,1440,135.7C1493.3,86,1547,62,1600,55.5C1653.3,49,1707,62,1760,55.5C1813.3,49,1867,25,1920,61.7C1973.3,99,2027,197,2080,246.7C2133.3,296,2187,296,2240,277.5C2293.3,259,2347,222,2400,191.2C2453.3,160,2507,136,2560,154.2C2613.3,173,2667,234,2720,271.3C2773.3,308,2827,321,2880,296C2933.3,271,2987,210,3040,191.2C3093.3,173,3147,197,3200,228.2C3253.3,259,3307,296,3360,308.3C3413.3,321,3467,308,3520,259C3573.3,210,3627,123,3680,104.8C3733.3,86,3787,136,3813,160.3L3840,185L3840,370L3813.3,370C3786.7,370,3733,370,3680,370C3626.7,370,3573,370,3520,370C3466.7,370,3413,370,3360,370C3306.7,370,3253,370,3200,370C3146.7,370,3093,370,3040,370C2986.7,370,2933,370,2880,370C2826.7,370,2773,370,2720,370C2666.7,370,2613,370,2560,370C2506.7,370,2453,370,2400,370C2346.7,370,2293,370,2240,370C2186.7,370,2133,370,2080,370C2026.7,370,1973,370,1920,370C1866.7,370,1813,370,1760,370C1706.7,370,1653,370,1600,370C1546.7,370,1493,370,1440,370C1386.7,370,1333,370,1280,370C1226.7,370,1173,370,1120,370C1066.7,370,1013,370,960,370C906.7,370,853,370,800,370C746.7,370,693,370,640,370C586.7,370,533,370,480,370C426.7,370,373,370,320,370C266.7,370,213,370,160,370C106.7,370,53,370,27,370L0,370Z"></path></svg>
+		<svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 370" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(142.344, 228.034, 169.973, 1)" offset="0%"></stop><stop stop-color="rgba(138.522, 212.097, 91.677, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,333L26.7,320.7C53.3,308,107,284,160,240.5C213.3,197,267,136,320,129.5C373.3,123,427,173,480,178.8C533.3,185,587,148,640,166.5C693.3,185,747,259,800,271.3C853.3,284,907,234,960,178.8C1013.3,123,1067,62,1120,86.3C1173.3,111,1227,222,1280,240.5C1333.3,259,1387,185,1440,135.7C1493.3,86,1547,62,1600,55.5C1653.3,49,1707,62,1760,55.5C1813.3,49,1867,25,1920,61.7C1973.3,99,2027,197,2080,246.7C2133.3,296,2187,296,2240,277.5C2293.3,259,2347,222,2400,191.2C2453.3,160,2507,136,2560,154.2C2613.3,173,2667,234,2720,271.3C2773.3,308,2827,321,2880,296C2933.3,271,2987,210,3040,191.2C3093.3,173,3147,197,3200,228.2C3253.3,259,3307,296,3360,308.3C3413.3,321,3467,308,3520,259C3573.3,210,3627,123,3680,104.8C3733.3,86,3787,136,3813,160.3L3840,185L3840,370L3813.3,370C3786.7,370,3733,370,3680,370C3626.7,370,3573,370,3520,370C3466.7,370,3413,370,3360,370C3306.7,370,3253,370,3200,370C3146.7,370,3093,370,3040,370C2986.7,370,2933,370,2880,370C2826.7,370,2773,370,2720,370C2666.7,370,2613,370,2560,370C2506.7,370,2453,370,2400,370C2346.7,370,2293,370,2240,370C2186.7,370,2133,370,2080,370C2026.7,370,1973,370,1920,370C1866.7,370,1813,370,1760,370C1706.7,370,1653,370,1600,370C1546.7,370,1493,370,1440,370C1386.7,370,1333,370,1280,370C1226.7,370,1173,370,1120,370C1066.7,370,1013,370,960,370C906.7,370,853,370,800,370C746.7,370,693,370,640,370C586.7,370,533,370,480,370C426.7,370,373,370,320,370C266.7,370,213,370,160,370C106.7,370,53,370,27,370L0,370Z"></path></svg>
+	</div>
+	<section class="text-center w-[650px] mx-auto mb-10">
+		<h3 class="text-center text-4xl font-semibold mb-5">Obituarios</h3>
+		<p class="text-sm">En memoria de aquellos que han partido, recordamos y honramos las vidas que tocaron con su presencia. Aunque sus nombres pueden desvanecerse con el tiempo, su impacto y el amor que compartieron perduran en nuestros corazones.</p>
+	</section> 
+	<section>
+		<Obituarios></Obituarios>
+	</section>
 </Layout>
-<style>
+<style is:global>
 	@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700&display=swap');
 	* {
 		font-family: 'Onest', sans-serif;
@@ -78,7 +90,7 @@ import Services from '../components/Services.astro';
 		animation-range: entry 25% cover 60%;
 		animation-fill-mode: both;
 	}
-	#servicesTitle {
+	#titleAnimated {
 		view-timeline-name: --image;
 		view-timeline-axis: block;
 		animation-timeline: --image;
