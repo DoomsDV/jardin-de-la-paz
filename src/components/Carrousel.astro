@@ -34,9 +34,9 @@
     </div>
     <!-- Slider indicators -->
     <div class="relative z-30 flex justify-center space-x-3 my-4">
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-600 hover:bg-slate-700 transition-colors" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-600 hover:bg-slate-700 transition-colors" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-slate-600 hover:bg-slate-700 transition-colors" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full transition-colors" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full transition-colors" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full transition-colors" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
     </div>
 </div>
 
@@ -46,5 +46,12 @@
     span {
         font-family: 'Onest', sans-serif;
 		    font-weight: 600;
-	}
+	  }
+    button {
+      background-color: rgb(88, 92, 99);
+      transition: background-color .3 linear;
+    }
+    button:hover {
+      background-color: rgb(59, 64, 73);
+    }
 </style>
