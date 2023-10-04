@@ -1,0 +1,24 @@
+---
+import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
+---
+<div class="sideBar" id="sideBar">
+    <ul class="flex items-center justify-between">
+        <li>
+            <ButtonCloseSidePanel client:only="preact"></ButtonCloseSidePanel>
+        </li>
+        <li><a href="/"><img src="/logo/logo-jardin-de-la-paz.png" alt="Logo de Minder" class="w-10"></a></li>
+    </ul>
+</div>
+<style>
+    #sideBar {
+        position: fixed;
+        width: 18rem;
+        height: 100%;
+        background-color: rgb(250, 250, 250);
+        top: 0;
+        right: -18rem;
+        transition: right 0.3s ease-in-out;
+        padding: 1.8rem;
+        z-index: 50;
+    }
+</style>
