@@ -1,11 +1,13 @@
 export function ButtonSidePanel() {
     let sidePanel = document.getElementById('sideBar');
+    let bloqueo = document.getElementById('bloqueo');
     function showSidePanel() {
         sidePanel.style.right = '0px';
+        bloqueo.classList.replace("hidden", "block");
     }
     return (
         <>
-            <button className="hidden md:inline-block" title="Abrir panel lateral" type="button" onClick={showSidePanel}>
+            <button className="hidden md:inline-block ml-5" title="Abrir panel lateral" type="button" onClick={showSidePanel}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="icon icon-tabler icon-tabler-menu-2 text-slate-600"
@@ -30,8 +32,10 @@ export function ButtonSidePanel() {
 
 export function ButtonCloseSidePanel () {
     let sidePanel = document.getElementById('sideBar');
+    let bloqueo = document.getElementById('bloqueo');
     function closeSidePanel() {
-        sidePanel.style.right = '-18rem';
+        sidePanel.style.right = '-20rem';
+        bloqueo.classList.replace("block", "hidden");
     }
     return (
         <>
