@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Feather from "../../components/icons/Feather.astro"
+import Calendar from "../../components/icons/Calendar.astro"
+import Dots from "../../components/icons/Dots.astro"
+const blogs = await Astro.glob("../../pages/blog/*.mdx")
+---
+
+<Layout title='Blog | Jardín de la paz'>
+    {
+        blogs.map(blog => {
+            return (
+                
+                <div class="flex items-center justify-center space-x-8 md:space-x-0 px-10 flex-wrap mt-8 relative">
+                    <img src={blog.frontmatter.image.url} class="h-full rounded-lg w-[45%] md:w-full min-w-[45%]" />
+                    <div class="w-[40%] md:w-full space-y-5 relative md:mt-10">
+                        <ul class="flex items-center justify-between">
+                            <li><img src="/logo/logo-jardin-de-la-paz.png" class="w-8" /> </li>
+                            <li><button><Dots /></button></li>    
+                        </ul>
+                        <span class="text-sm text-slate-600 flex items-center"> <Feather /> {blog.frontmatter.author} | <Calendar /> {blog.frontmatter.pubDate}</span>
+                        <h3 class="text-2xl font-semibold hover:text-green-600 transition-colors"><a href={blog.frontmatter.href}>{blog.frontmatter.title}</a></h3>    
+                        <p class="line-clamp-3">{blog.frontmatter.description}</p>
+                    </div>
+                </div>
+
+            )
+        })
+    }
+    <hr class="mt-10" />
+</Layout>
