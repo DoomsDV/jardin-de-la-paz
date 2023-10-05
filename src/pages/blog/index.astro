@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import BlogLayout from '../../layouts/BlogLayout.astro'
 import Feather from "../../components/icons/Feather.astro"
 import Calendar from "../../components/icons/Calendar.astro"
 import Dots from "../../components/icons/Dots.astro"
 const blogs = await Astro.glob("../../pages/blog/*.mdx")
 ---
 
-<Layout title='Blog | Jardín de la paz'>
+<BlogLayout title='Blog | Jardín de la paz'>
     {
         blogs.map(blog => {
             return (
@@ -16,7 +17,7 @@ const blogs = await Astro.glob("../../pages/blog/*.mdx")
                     <div class="w-[40%] md:w-full space-y-5 relative md:mt-10">
                         <ul class="flex items-center justify-between">
                             <li><img src="/logo/logo-jardin-de-la-paz.png" class="w-8" /> </li>
-                            <li><button><Dots /></button></li>    
+                            <li><button title="Menu"><Dots /></button></li>    
                         </ul>
                         <span class="text-sm text-slate-600 flex items-center"> <Feather /> {blog.frontmatter.author} | <Calendar /> {blog.frontmatter.pubDate}</span>
                         <h3 class="text-2xl font-semibold hover:text-green-600 transition-colors"><a href={blog.frontmatter.href}>{blog.frontmatter.title}</a></h3>    
@@ -28,4 +29,4 @@ const blogs = await Astro.glob("../../pages/blog/*.mdx")
         })
     }
     <hr class="mt-10" />
-</Layout>
+</BlogLayout>
