@@ -1,8 +1,8 @@
 ---
 import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
 ---
-<div id="bloqueo" class="w-full h-full absolute top-0 z-[100] bg-black/30 hidden"></div>
-<aside class="sideBar" id="sideBar">
+<div id="bloqueo" class="w-full h-full absolute top-0 z-[100] md:visible invisible bg-black/30 hidden"></div>
+<aside class="sideBar md:visible invisible" id="sideBar">
     <ul class="flex items-center justify-between">
         <li>
             <ButtonCloseSidePanel client:only="preact"></ButtonCloseSidePanel>
@@ -12,70 +12,34 @@ import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
     <div class="h-full w-full px-3 py-4 overflow-y-auto">
         <ul class="space-y-3 font-medium">
             <li>
-                <button type="button" class="flex items-center w-full p-2 text-base text-gray-800 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-services">
-                      <span class="flex-1 ml-3 text-left whitespace-nowrap">Servicios</span>
-                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                      </svg>
-                </button>
-                <ul id="dropdown-services" class="hidden py-2 space-y-2">
-                      <li>
-                         <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Planes piedras preciosas</a>
-                      </li>
-                      <li>
-                         <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Espacios en los jardines</a>
-                      </li>
-                      <li>
-                         <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">CIVI</a>
-                      </li>
-                </ul>
+                <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
+                    <div class="collapse-title font-medium">
+                      Servicios
+                    </div>
+                    <div class="collapse-content"> 
+                        <a href="/blog">Content</a>
+                    </div>
+                  </div>
              </li>
            <li>
-                <button type="button" class="flex items-center w-full p-2 text-base text-gray-800 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-jardin">
-                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Jardines</span>
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg>
-                </button>
-                <ul id="dropdown-jardin" class="hidden py-2 space-y-2">
-                        <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Lambaré</a>
-                        </li>
-                        <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Cnel. Oviedo</a>
-                        </li>
-                </ul>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
+                <div class="collapse-title font-medium">
+                  Jardines
+                </div>
+                <div class="collapse-content"> 
+                    <a href="/blog">Content</a>
+                </div>
+              </div>
            </li>
            <li>
-                <button type="button" class="flex items-center w-full p-2 text-base text-gray-800 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-salones">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Salones</span>
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                </button>
-                <ul id="dropdown-salones" class="hidden py-2 space-y-2">
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Asunción (Centro)</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Los Laureles</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Lambaré</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Fdo. de la Mora</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Luque</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Cnel. Oviedo</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center w-full p-2 text-gray-800 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Encarnación</a>
-                    </li>
-                </ul>
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
+                <div class="collapse-title font-medium">
+                  Salones
+                </div>
+                <div class="collapse-content"> 
+                  <a href="/blog">Content</a>
+                </div>
+              </div>
             </li>
            <li>
               <a href="#" class="flex items-center p-2 text-gray-800 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -110,6 +74,7 @@ import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
         </ul>
      </div>
 </aside>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 <style>
     #sideBar {
         position: fixed;
