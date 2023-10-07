@@ -1,7 +1,7 @@
 ---
 import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
 ---
-<div id="bloqueo" class="w-full h-full absolute top-0 z-[100] md:visible invisible bg-black/30 hidden"></div>
+<div id="bloqueo" class="w-full h-full fixed top-0 z-[100] md:visible invisible bg-black/30 hidden"></div>
 <aside class="sideBar md:visible invisible" id="sideBar">
     <ul class="flex items-center justify-between">
         <li>
@@ -11,36 +11,51 @@ import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
     </ul>
     <div class="h-full w-full px-3 py-4 overflow-y-auto">
         <ul class="space-y-3 font-medium">
-            <li>
-                <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
-                    <div class="collapse-title font-medium">
-                      Servicios
-                    </div>
-                    <div class="collapse-content"> 
-                        <a href="/blog">Content</a>
-                    </div>
-                  </div>
-             </li>
-           <li>
-            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
-                <div class="collapse-title font-medium">
-                  Jardines
-                </div>
-                <div class="collapse-content"> 
-                    <a href="/blog">Content</a>
-                </div>
-              </div>
-           </li>
-           <li>
-            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
-                <div class="collapse-title font-medium">
-                  Salones
-                </div>
-                <div class="collapse-content"> 
-                  <a href="/blog">Content</a>
-                </div>
-              </div>
-            </li>
+          <li>
+            <button id="btnShowServices" class="font-medium text-gray-800 flex w-full justify-between">
+               Servicios
+               <svg class="icon icon-tabler icon-tabler-chevron-down inline-block" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M6 9l6 6l6 -6"></path>
+               </svg>
+            </button>
+            <ul id="servicios" class="py-1 h-0 pl-5 overflow-hidden space-y-5 mt-3 text-gray-700">
+               <li><a href="#">Planes piedras preciosas</a></li>
+               <li><a href="#">Espacios en los jardines</a></li>
+               <li><a href="#">CIVI</a></li>
+            </ul>
+         </li>
+         <li>
+            <button id="btnShowJardines" class="font-medium text-gray-800 flex w-full justify-between">
+               Jardines
+               <svg class="icon icon-tabler icon-tabler-chevron-down inline-block" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M6 9l6 6l6 -6"></path>
+               </svg>
+            </button>
+            <ul id="jardines" class="py-1 overflow-hidden pl-5 h-0 space-y-5 mt-3 text-gray-700">
+               <li><a href="#">Lambaré</a></li>
+               <li><a href="#">Cnel. Oviedo</a></li>
+            </ul>
+         </li>
+         <li>
+            <button id="btnShowSalones" class="font-medium text-gray-800 flex w-full justify-between">
+               Salones
+               <svg class="icon icon-tabler icon-tabler-chevron-down inline-block" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M6 9l6 6l6 -6"></path>
+               </svg>
+            </button>
+            <ul id="salones" class="relative py-1 overflow-hidden h-0 pl-5 space-y-5 mt-3 text-gray-700">
+               <li><a href="#">Asunción (Centro)</a></li>
+               <li><a href="#">Los Laureles</a></li>
+               <li><a href="#">Lambaré</a></li>
+               <li><a href="#">Fdo. De la Mora</a></li>
+               <li><a href="#">Luque</a></li>
+               <li><a href="#">Cnel. Oviedo</a></li>
+               <li><a href="#">Encarnación</a></li>
+            </ul>
+         </li>
            <li>
               <a href="#" class="flex items-center p-2 text-gray-800 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cross" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -74,7 +89,6 @@ import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
         </ul>
      </div>
 </aside>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 <style>
     #sideBar {
         position: fixed;
@@ -89,11 +103,43 @@ import {ButtonCloseSidePanel} from "./jsx/ButtonSideBar.jsx";
     }
 </style>
 <script>
-    let bloqueo = document.getElementById("bloqueo");
-    let sideBar = document.getElementById("sideBar") as HTMLElement;
-    bloqueo.addEventListener("click", (e) => {
-        bloqueo.classList.replace("block", "hidden");
-        sideBar.style.right = "-20rem";
-        e.preventDefault();
-    })
+   let bloqueo = document.getElementById("bloqueo");
+   let sideBar = document.getElementById("sideBar");
+   const btnShowServices = document.getElementById("btnShowServices");
+   const btnShowJardines = document.getElementById("btnShowJardines");
+   const btnShowSalones = document.getElementById("btnShowSalones");
+   const servicios = document.getElementById("servicios");
+   const jardines = document.getElementById("jardines");
+   const salones = document.getElementById("salones");
+
+   btnShowServices.addEventListener('click', e => {
+      console.log(true)
+      if (servicios.classList.toString().includes('h-0')) {
+         servicios.classList.replace('h-0', 'h-auto');
+      } else {
+         servicios.classList.replace('h-auto', 'h-0');
+      }
+      e.preventDefault();
+   })
+   btnShowJardines.addEventListener('click', e => {
+      if (jardines.classList.toString().includes('h-0')) {
+         jardines.classList.replace('h-0', 'h-auto');
+      } else {
+         jardines.classList.replace('h-auto', 'h-0');
+      }
+      e.preventDefault();
+   })
+   btnShowSalones.addEventListener('click', e => {
+      if (salones.classList.toString().includes('h-0')) {
+         salones.classList.replace('h-0', 'h-auto');
+      } else {
+         salones.classList.replace('h-auto', 'h-0');
+      }
+      e.preventDefault();
+   })
+   bloqueo.addEventListener("click", (e) => {
+      bloqueo.classList.replace("block", "hidden");
+      sideBar.style.right = "-20rem";
+      e.preventDefault();
+   })
 </script>
