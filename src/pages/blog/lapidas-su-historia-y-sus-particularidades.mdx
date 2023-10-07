@@ -9,11 +9,13 @@ author: "Jardín de la paz"
 href: "/blog/lapidas-su-historia-y-sus-particularidades"
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import BreadCrumb from "../../components/BreadCrumb.astro";
 
 <BlogLayout title={frontmatter.title}>
     <section class="w-[70%] min-w-[70%] md:w-[90%] mx-auto mt-10 space-y-7">
+        <BreadCrumb pageName={frontmatter.title} />
         <h1 class="h1">Lápidas: su historia y sus particularidades</h1>
-        <img class="img" src="https://static.wixstatic.com/media/6a7caa_325eed00bfeb4b14bfd7547cf67e118e~mv2.jpg/v1/fill/w_1110,h_740,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6a7caa_325eed00bfeb4b14bfd7547cf67e118e~mv2.jpg" />
+        <img alt="Imagen de lápidas" class="img" src="https://static.wixstatic.com/media/6a7caa_325eed00bfeb4b14bfd7547cf67e118e~mv2.jpg/v1/fill/w_1110,h_740,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6a7caa_325eed00bfeb4b14bfd7547cf67e118e~mv2.jpg" />
         <p>Podríamos decir que, desde siempre, los seres humanos hemos encontrado una manera de homenajear la vida, y también la muerte. De distintos modos, y a lo largo del tiempo, las despedidas de seres queridos fueron adquiriendo formas, tradiciones y estilos. Si observamos el mundo a nuestro alrededor, veremos que, desde las pirámides a los cementerios privados o municipales, el mundo está lleno de monumentos de piedras que honran la partida de un ser querido.  Otro gran ejemplo son los “stećci”. Estas lápidas medievales en Bosnia y Herzegovina que han formado parte del paisaje durante más de medio milenio, y que se han convertido en Patrimonio de la Humanidad por la UNESCO.
         Hoy quisiéramos hablar de este importante y singular elemento: las lápidas. Y, con el espíritu de seguir aprendiendo, responder a preguntas como: ¿De dónde vienen las lápidas? ¿Qué se escribe en ellas? y ¿Qué es lo más inusual visto en una?</p>
         <h2 class="h2">¿De dónde vienen las lápidas? </h2>
@@ -30,16 +32,16 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
         <h3 class="h3">Fuentes: </h3>
         <ul class="text-green-500 space-y-3 overflow-x-auto">
             <li>
-                <a href="https://www.rememori.com/necrologicas/noticias-fallecidos/historia-de-las-lapidas/ ">https://www.rememori.com/necrologicas/noticias-fallecidos/historia-de-las-lapidas/ </a>
+                <a  title="Página de rememori" href="https://www.rememori.com/necrologicas/noticias-fallecidos/historia-de-las-lapidas/ ">https://www.rememori.com/necrologicas/noticias-fallecidos/historia-de-las-lapidas/ </a>
             </li>
             <li>
-                <a href="https://cordis.europa.eu/article/id/430591-unravelling-the-secrets-of-the-medieval-tombstones-in-the-western-balkans/es">https://cordis.europa.eu/article/id/430591-unravelling-the-secrets-of-the-medieval-tombstones-in-the-western-balkans/es</a>
+                <a title="Página de cordis europa" href="https://cordis.europa.eu/article/id/430591-unravelling-the-secrets-of-the-medieval-tombstones-in-the-western-balkans/es">https://cordis.europa.eu/article/id/430591-unravelling-the-secrets-of-the-medieval-tombstones-in-the-western-balkans/es</a>
             </li>
             <li>
-                <a href="https://www.europapress.es/desconecta/curiosity/noticia-10-personas-fueron-mundo-plasmando-lapida-todo-humor-tenian-20171027124217.html">https://www.europapress.es/desconecta/curiosity/noticia-10-personas-fueron-mundo-plasmando-lapida-todo-humor-tenian-20171027124217.html</a>
+                <a title="Página de europapress" href="https://www.europapress.es/desconecta/curiosity/noticia-10-personas-fueron-mundo-plasmando-lapida-todo-humor-tenian-20171027124217.html">https://www.europapress.es/desconecta/curiosity/noticia-10-personas-fueron-mundo-plasmando-lapida-todo-humor-tenian-20171027124217.html</a>
             </li>
             <li>
-                <a href="http://www.redfuneraria.com/sector-funerario/productos-novedosos/tumbas-con-codigo-qr#:~:text=De%20Qu%C3%A9%20se%20Trata%20el,o%20m%C3%BAsica%20personal%20del%20difunto">http://www.redfuneraria.com/sector-funerario/productos-novedosos/tumbas-con-codigo-qr#:~:text=De%20Qu%C3%A9%20se%20Trata%20el,o%20m%C3%BAsica%20personal%20del%20difunto.</a>
+                <a title="Página de redfuneraria" href="http://www.redfuneraria.com/sector-funerario/productos-novedosos/tumbas-con-codigo-qr#:~:text=De%20Qu%C3%A9%20se%20Trata%20el,o%20m%C3%BAsica%20personal%20del%20difunto">http://www.redfuneraria.com/sector-funerario/productos-novedosos/tumbas-con-codigo-qr#:~:text=De%20Qu%C3%A9%20se%20Trata%20el,o%20m%C3%BAsica%20personal%20del%20difunto.</a>
             </li>
         </ul>
         <hr/>
