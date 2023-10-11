@@ -1,0 +1,4 @@
+# Encabezados HTTP
+/*
+X-Content-Type-Options: nosniff
+*/
