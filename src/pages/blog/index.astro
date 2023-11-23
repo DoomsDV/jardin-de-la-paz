@@ -13,7 +13,7 @@ const blogs = await Astro.glob("../../pages/blog/*.mdx")
             return (
                 
                 <div class="flex items-center justify-center space-x-8 md:space-x-0 px-10 flex-wrap mt-8 relative">
-                    <img src={blog.frontmatter.image.url} class="h-full rounded-lg w-[45%] md:w-full min-w-[45%]" />
+                    <a href={blog.frontmatter.href} class="h-full rounded-lg w-[45%] md:w-full min-w-[45%]"><img src={blog.frontmatter.image.url} class="" /></a>
                     <div class="w-[40%] md:w-full space-y-5 relative md:mt-10">
                         <ul class="flex items-center justify-between">
                             <li><img src="/logo/logo-jardin-de-la-paz.png" class="w-8" /> </li>
